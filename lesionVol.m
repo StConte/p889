@@ -10,7 +10,7 @@ end
 
 function lesionVolumeSub(fnm)
 m = load(fnm); 
-if ~isfiled(m, 'lesion'), return; end
+if ~isfield(m, 'lesion'), return; end
 vol = sum(m.lesion.dat(:));
 totVol = numel(m.lesion.dat(:));
 %fprintf('s%\t%d\t%d\n', fnm, vol, totVol);
